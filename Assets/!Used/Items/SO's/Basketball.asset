@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d374751eee06843a14f0cb1426990e, type: 3}
+  m_Name: Basketball
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  itemName: Basketball
+  icon: {fileID: 21300000, guid: c9d4dffc8e39a734b8eef9379756c732, type: 3}
+  maxStackSize: 5
+  itemPrefab: {fileID: 4092055986728263803, guid: 80948bc21f133064ba1631c51d70d780, type: 3}
+  handItemPrefab: {fileID: 4092055986728263803, guid: 7bf7007413b30cf4e8e33448ec867d67, type: 3}
+  description: You throw it.
+  itemType: 0
