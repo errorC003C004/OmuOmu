@@ -449,6 +449,31 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void PickupAuto(Renderer lookedAtRenderer)
+    {
+        if (lookedAtRenderer != null)
+        {
+            if (lookedAtRenderer.TryGetComponent<Item>(out var item))
+            {
+                invFull = false;
+                if (item.grabToHotbar)
+                    AddToHotbarFirst(item.item, item.amount, item.ammoAmount, item.maxAmmo);
+                else
+                    AddItemWithAmmo(item.item, item.amount, item.ammoAmount, item.maxAmmo);
+
+                if(!invFull)
+                {
+                    Destroy(item.gameObject);
+                    EquipHandItem();
+                }
+            }
+            if (lookedAtRenderer.TryGetComponent<InteractType>(out var interact))
+            {
+                interact.Interact(this);
+            }
+        }
+    }
+
     private void DetectLookedAtItem()   
     {
         if (lookedAtRenderer != null)

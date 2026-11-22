@@ -30,6 +30,13 @@ public class FallFix : MonoBehaviour
                 print("<color=black>[Fall Fix]</color> Item not found: " + other.transform.GetComponent<Item>().item.itemName);
             }
         }
+        else if (other.gameObject.CompareTag("Untagged"))
+        {
+            if (other.transform.name != "collider")
+            {
+                print("<color=black>[Fall Fix]</color> Object not found: " + other.gameObject.name);
+            }
+        }
         else
         {
             print("<color=black>[Fall Fix]</color> Object not found: " + other.gameObject.name);
