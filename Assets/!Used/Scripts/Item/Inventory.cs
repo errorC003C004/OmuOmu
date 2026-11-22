@@ -132,6 +132,7 @@ public class Inventory : MonoBehaviour
             menus.SetActive(!menus.activeInHierarchy);
             bool isPauseMenuActive = menus.activeInHierarchy;
             revContainer.SetActive(!isPauseMenuActive);
+            Time.timeScale = isPauseMenuActive ? 0f : 1f;
             ToggleMouse();
         }
 

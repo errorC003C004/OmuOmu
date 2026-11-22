@@ -70,6 +70,12 @@ public class ConfigManagerEditor : Editor
     public override void OnInspectorGUI()
     {
         var configManager = (ConfigManager)target;
+
+        // Double click to open thingy
+        using (new EditorGUI.DisabledScope(true))
+            EditorGUILayout.ObjectField("Script", MonoScript.FromMonoBehaviour(configManager), typeof(MonoScript), false);
+
+        //Is Dither Stuff
         GUILayout.BeginHorizontal();
             GUILayout.FlexibleSpace();
             GUILayout.Label("Is Dither");
